@@ -9,9 +9,8 @@ This is
 
 The purpose of this part is the solution for problem 1.
 
-First we create a data frame comprised of **a random sample of size 10
-and a logical vector indicating whether elements of the sample are
-greater than 0** from a\_standard Normal distribution\_:
+\#First we create a data frame\*\* from a\_standard Normal
+distribution\_:
 
 ``` r
 library(tidyverse)
@@ -29,8 +28,25 @@ library(tidyverse)
     ## x dplyr::lag()    masks stats::lag()
 
 ``` r
-  la_df = tibble(
-  norm_samp = rnorm(10, mean = 0), 
-  norm_samp_pos = norm_samp > 0,
+  set.seed(123)
+  df <- tibble( 
+    X_1 = rnorm( 10, sd = 1),
+    X_2 = X_1 > 0,
+    X_3 = c("a", "b", "c", "d","e", "f", "g","h","i","j"),
+    X_4 = factor(c("1", "2", "3", "2","1", "3", "2","1","3","1"))
   )
+  
+  mean_samp1 = mean(pull(df, X_1))
+  mean_samp2 = mean(pull(df, X_2))
+  mean_samp3 = mean(pull(df, X_3))
 ```
+
+    ## Warning in mean.default(pull(df, X_3)): argument is not numeric or logical:
+    ## returning NA
+
+``` r
+  mean_samp4 = mean(pull(df, X_4))
+```
+
+    ## Warning in mean.default(pull(df, X_4)): argument is not numeric or logical:
+    ## returning NA
