@@ -1,0 +1,31 @@
+---
+title: "P8105_hw1_yz4188 document"
+output: "github_document"
+author: "yueran zhang"
+date: "09/28/2021"
+---
+
+This is 
+
+# Problem 1
+
+The purpose of this part is the solution for problem 1.
+
+First we create  a data frame comprised of **a random sample of size 10 and a logical vector indicating whether elements of the sample are greater than 0** 
+from a_standard Normal distribution_:
+
+```{r problem_1}
+library(tidyverse)
+
+  la_df = tibble(
+  norm_samp = rnorm(10, mean = 0), 
+  norm_samp_pos = norm_samp > 0,
+  )
+
+
+  
+  
+  
+  
+```
+
