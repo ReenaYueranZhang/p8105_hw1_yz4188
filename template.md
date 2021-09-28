@@ -3,7 +3,7 @@ P8105\_hw1\_yz4188 document
 yueran zhang
 09/28/2021
 
-This is
+This is my homework!
 
 # Problem 1
 
@@ -56,13 +56,6 @@ mean_samp4 = mean(pull(df, X_4))
 ``` r
 #**Lastly we convert variables to numeric factor**  
 
-as.numeric(pull(df, X_1))
-```
-
-    ##  [1] -0.56047565 -0.23017749  1.55870831  0.07050839  0.12928774  1.71506499
-    ##  [7]  0.46091621 -1.26506123 -0.68685285 -0.44566197
-
-``` r
 as.numeric(pull(df, X_2))
 ```
 
@@ -81,3 +74,57 @@ as.numeric(pull(df, X_4))
 ```
 
     ##  [1] 1 2 3 2 1 3 2 1 3 1
+
+# Problem 2
+
+The purpose of this part is the solution for problem 2.
+
+**Firstly we download the dataset**
+
+``` r
+data("penguins", package = "palmerpenguins")
+  names(penguins)
+```
+
+    ## [1] "species"           "island"            "bill_length_mm"   
+    ## [4] "bill_depth_mm"     "flipper_length_mm" "body_mass_g"      
+    ## [7] "sex"               "year"
+
+``` r
+  summary(penguins)
+```
+
+    ##       species          island    bill_length_mm  bill_depth_mm  
+    ##  Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
+    ##  Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
+    ##  Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
+    ##                                  Mean   :43.92   Mean   :17.15  
+    ##                                  3rd Qu.:48.50   3rd Qu.:18.70  
+    ##                                  Max.   :59.60   Max.   :21.50  
+    ##                                  NA's   :2       NA's   :2      
+    ##  flipper_length_mm  body_mass_g       sex           year     
+    ##  Min.   :172.0     Min.   :2700   female:165   Min.   :2007  
+    ##  1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  
+    ##  Median :197.0     Median :4050   NA's  : 11   Median :2008  
+    ##  Mean   :200.9     Mean   :4202                Mean   :2008  
+    ##  3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
+    ##  Max.   :231.0     Max.   :6300                Max.   :2009  
+    ##  NA's   :2         NA's   :2
+
+``` r
+  nrow(penguins)
+```
+
+    ## [1] 344
+
+``` r
+  ncol(penguins)
+```
+
+    ## [1] 8
+
+``` r
+  mean(pull(penguins,flipper_length_mm), na.rm = TRUE)
+```
+
+    ## [1] 200.9152

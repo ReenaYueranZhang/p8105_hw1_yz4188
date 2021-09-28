@@ -34,7 +34,6 @@ mean_samp4 = mean(pull(df, X_4))
 
 #**Lastly we convert variables to numeric factor**  
 
-as.numeric(pull(df, X_1))
 as.numeric(pull(df, X_2))
 as.numeric(pull(df, X_3))
 as.numeric(pull(df, X_4))
