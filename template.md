@@ -9,7 +9,7 @@ This is
 
 The purpose of this part is the solution for problem 1.
 
-\#First we create a data frame\*\* from a\_standard Normal
+\#**First we create a data frame** from a\_standard Normal
 distribution\_:
 
 ``` r
@@ -36,17 +36,48 @@ library(tidyverse)
     X_4 = factor(c("1", "2", "3", "2","1", "3", "2","1","3","1"))
   )
   
-  mean_samp1 = mean(pull(df, X_1))
-  mean_samp2 = mean(pull(df, X_2))
-  mean_samp3 = mean(pull(df, X_3))
+#**Then we calculate mean of the data** 
+
+mean_samp1 = mean(pull(df, X_1))
+mean_samp2 = mean(pull(df, X_2))
+mean_samp3 = mean(pull(df, X_3))
 ```
 
     ## Warning in mean.default(pull(df, X_3)): argument is not numeric or logical:
     ## returning NA
 
 ``` r
-  mean_samp4 = mean(pull(df, X_4))
+mean_samp4 = mean(pull(df, X_4))
 ```
 
     ## Warning in mean.default(pull(df, X_4)): argument is not numeric or logical:
     ## returning NA
+
+``` r
+#**Lastly we convert variables to numeric factor**  
+
+as.numeric(pull(df, X_1))
+```
+
+    ##  [1] -0.56047565 -0.23017749  1.55870831  0.07050839  0.12928774  1.71506499
+    ##  [7]  0.46091621 -1.26506123 -0.68685285 -0.44566197
+
+``` r
+as.numeric(pull(df, X_2))
+```
+
+    ##  [1] 0 0 1 1 1 1 1 0 0 0
+
+``` r
+as.numeric(pull(df, X_3))
+```
+
+    ## Warning: NAs introduced by coercion
+
+    ##  [1] NA NA NA NA NA NA NA NA NA NA
+
+``` r
+as.numeric(pull(df, X_4))
+```
+
+    ##  [1] 1 2 3 2 1 3 2 1 3 1

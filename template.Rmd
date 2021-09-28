@@ -11,7 +11,7 @@ This is
 
 The purpose of this part is the solution for problem 1.
 
-#First we create  a data frame** 
+#**First we create  a data frame** 
 from a_standard Normal distribution_:
 
 ```{r problem_1}
@@ -25,12 +25,19 @@ library(tidyverse)
     X_4 = factor(c("1", "2", "3", "2","1", "3", "2","1","3","1"))
   )
   
-  mean_samp1 = mean(pull(df, X_1))
-  mean_samp2 = mean(pull(df, X_2))
-  mean_samp3 = mean(pull(df, X_3))
-  mean_samp4 = mean(pull(df, X_4))
-                   
-  
+#**Then we calculate mean of the data** 
+
+mean_samp1 = mean(pull(df, X_1))
+mean_samp2 = mean(pull(df, X_2))
+mean_samp3 = mean(pull(df, X_3))
+mean_samp4 = mean(pull(df, X_4))
+
+#**Lastly we convert variables to numeric factor**  
+
+as.numeric(pull(df, X_1))
+as.numeric(pull(df, X_2))
+as.numeric(pull(df, X_3))
+as.numeric(pull(df, X_4))
   
 ```
 
