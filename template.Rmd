@@ -5,7 +5,7 @@ author: "yueran zhang"
 date: "09/28/2021"
 ---
 
-This is 
+This is my homework!
 
 # Problem 1
 
@@ -39,4 +39,23 @@ as.numeric(pull(df, X_3))
 as.numeric(pull(df, X_4))
   
 ```
+
+
+# Problem 2
+
+The purpose of this part is the solution for problem 2.
+
+**Firstly we download the dataset**
+
+```{r}
+data("penguins", package = "palmerpenguins")
+  names(penguins)
+  summary(penguins)
+  nrow(penguins)
+  ncol(penguins)
+  mean(pull(penguins,flipper_length_mm), na.rm = TRUE)
+```
+
+
+
 

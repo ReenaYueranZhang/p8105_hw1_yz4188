@@ -79,7 +79,7 @@ as.numeric(pull(df, X_4))
 
 The purpose of this part is the solution for problem 2.
 
-**Firstly we download the dataset**
+**Firstly we inport the data**
 
 ``` r
 data("penguins", package = "palmerpenguins")
@@ -128,3 +128,19 @@ data("penguins", package = "palmerpenguins")
 ```
 
     ## [1] 200.9152
+
+**Lastly we create a graph for the data**
+
+``` r
+ggplot(penguins,aes( x = bill_length_mm , y = flipper_length_mm)) + geom_point(aes(color = species))
+```
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
+
+![](template_files/figure-gfm/scatterplot-1.png)<!-- -->
+
+``` r
+ggsave("scatterplot.pdf", height = 4, width = 6)
+```
+
+    ## Warning: Removed 2 rows containing missing values (geom_point).
